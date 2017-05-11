@@ -203,10 +203,10 @@
     <value>The FeatureType specified was not the polygon feature type.</value>
   </data>
   <data name="FileExists_S" xml:space="preserve">
-    <value>The fileName %S already exists.  Do you wish to overwrite it?</value>
+    <value>该文件 %S 已经存在，是否要覆盖？</value>
   </data>
   <data name="FileNotFound_S" xml:space="preserve">
-    <value>The fileName %S was not found.</value>
+    <value>该文件 %S 未找到。</value>
   </data>
   <data name="FileNotLines_S" xml:space="preserve">
     <value>The fileName %S contains a feature type other than lines.</value>
@@ -695,7 +695,7 @@
     <value>Expression</value>
   </data>
   <data name="Legend" xml:space="preserve">
-    <value>Legend</value>
+    <value>图层</value>
   </data>
   <data name="Extensions" xml:space="preserve">
     <value>Extensions</value>
@@ -707,7 +707,7 @@
     <value>Input</value>
   </data>
   <data name="MapLayers" xml:space="preserve">
-    <value>Map Layers</value>
+    <value>地图图层</value>
   </data>
   <data name="Output" xml:space="preserve">
     <value>Output</value>
@@ -757,7 +757,7 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>There was no selected feature layer in the legend to clarify which features to delete.  Please select a layer or group in the legend.</value>
   </data>
   <data name="MapFrame_Projection" xml:space="preserve">
-    <value>Projection</value>
+    <value>坐标投影</value>
   </data>
   <data name="ProjectFile" xml:space="preserve">
     <value>Project File</value>
@@ -790,7 +790,7 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>Discard Changes?</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>错误</value>
   </data>
   <data name="FailedToReadAPortionOfTheSpecifiedMapFile" xml:space="preserve">
     <value>Failed to read a portion of the specified map file: {0}</value>
@@ -811,13 +811,13 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>No feature layers were selected in the legend.  Select the layer to use.</value>
   </data>
   <data name="Add_Layer" xml:space="preserve">
-    <value>Add Layer...</value>
+    <value>添加图层</value>
   </data>
   <data name="Deselect" xml:space="preserve">
-    <value>Deselect All</value>
+    <value>取消选中</value>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File</value>
+    <value>文件</value>
   </data>
   <data name="FileNewToolTip" xml:space="preserve">
     <value>Clears the current map. The user is prompted to save any changes to the current map project.</value>
@@ -832,31 +832,31 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>Allows the user to name the file and location where the map is to be saved on their computer.</value>
   </data>
   <data name="File_Exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>退出</value>
   </data>
   <data name="File_New" xml:space="preserve">
-    <value>New</value>
+    <value>新建</value>
   </data>
   <data name="File_Open" xml:space="preserve">
-    <value>Open...</value>
+    <value>打开</value>
   </data>
   <data name="File_Print" xml:space="preserve">
-    <value>Print Layout...</value>
+    <value>打印</value>
   </data>
   <data name="File_Reset_Layout" xml:space="preserve">
-    <value>Reset Window Layout</value>
+    <value>重置布局</value>
   </data>
   <data name="File_Save" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="File_SaveAs" xml:space="preserve">
-    <value>Save As...</value>
+    <value>另存为</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Map</value>
+    <value>地图</value>
   </data>
   <data name="Identify" xml:space="preserve">
-    <value>Identify</value>
+    <value>要素识别</value>
   </data>
   <data name="Layers_Group" xml:space="preserve">
     <value>Layers</value>
@@ -865,19 +865,19 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>Map Tool</value>
   </data>
   <data name="Pan" xml:space="preserve">
-    <value>Pan</value>
+    <value>平移</value>
   </data>
   <data name="Pointer" xml:space="preserve">
     <value>Pointer</value>
   </data>
   <data name="Remove_Layer" xml:space="preserve">
-    <value>Remove Layer</value>
+    <value>移除图层</value>
   </data>
   <data name="Save_Layer" xml:space="preserve">
     <value>Save Layer...</value>
   </data>
   <data name="Select" xml:space="preserve">
-    <value>Select</value>
+    <value>选择</value>
   </data>
   <data name="View_Group" xml:space="preserve">
     <value>View</value>
@@ -889,39 +889,39 @@ Reproject the layer to match the map coordinate system? This will not affect the
     <value>In</value>
   </data>
   <data name="Zoom_In_Tooltip" xml:space="preserve">
-    <value>Zoom In</value>
+    <value>放大</value>
   </data>
   <data name="Zoom_Next" xml:space="preserve">
     <value>Next</value>
   </data>
   <data name="Zoom_Next_Tooltip" xml:space="preserve">
-    <value>Zoom Next</value>
+    <value>下一次缩放</value>
   </data>
   <data name="Zoom_Out" xml:space="preserve">
     <value>Out</value>
   </data>
   <data name="Zoom_Out_Tooltip" xml:space="preserve">
-    <value>Zoom Out</value>
+    <value>缩小</value>
   </data>
   <data name="Zoom_Previous" xml:space="preserve">
     <value>Previous</value>
   </data>
   <data name="Zoom_Previous_Tooltip" xml:space="preserve">
-    <value>Zoom Previous</value>
+    <value>上一次缩放</value>
   </data>
   <data name="Zoom_To_Coordinates" xml:space="preserve">
-    <value>Zoom To Coordinates</value>
+    <value>缩放到指定坐标</value>
   </data>
   <data name="Zoom_To_Extents" xml:space="preserve">
     <value>Full Extent</value>
   </data>
   <data name="Zoom_To_Extents_Tooltip" xml:space="preserve">
-    <value>Zoom to Full Extent</value>
+    <value>全幅显示</value>
   </data>
   <data name="Zoom_To_Layer" xml:space="preserve">
-    <value>Zoom To Layer</value>
+    <value>缩放到图层</value>
   </data>
   <data name="File_Options" xml:space="preserve">
-    <value>Options</value>
+    <value>配置</value>
   </data>
 </root>

@@ -37,7 +37,7 @@ namespace DotSpatial.Controls
         private readonly Dictionary<string, string> _featureIDFields;
         private readonly MenuItem _mnuAssignIdField;
         private readonly MenuItem _mnuSelectMenu;
-        
+
         private readonly ContextMenu mnuTreeContext;
         private string _previouslySelectedLayerName;
 
@@ -139,7 +139,7 @@ namespace DotSpatial.Controls
                         mnuTreeContext.MenuItems.Add(_mnuAssignIdField);
                         mnuTreeContext.Show(treFeatures, e.Location);
                     }
-                }  
+                }
             }
         }
 
@@ -165,7 +165,7 @@ namespace DotSpatial.Controls
         /// <param name="bounds"></param>
         public virtual bool Add(IFeatureLayer layer, Extent bounds)
         {
-            var result = ((FeatureSet) layer.DataSet).Select(bounds);
+            var result = ((FeatureSet)layer.DataSet).Select(bounds);
             if (result.Count == 0)
             {
                 return false;
@@ -255,7 +255,7 @@ namespace DotSpatial.Controls
 
             treFeatures.ExpandAll();
             treFeatures.HideSelection = false;
-           // treFeatures.Focus();
+            // treFeatures.Focus();
         }
 
         private void treFeatures_AfterSelect(object sender, TreeViewEventArgs e)
@@ -267,9 +267,11 @@ namespace DotSpatial.Controls
                 return;
             }
             var dt = new DataTable();
+
             dt.Columns.Add("Field Name");
             dt.Columns.Add("Value");
-
+            dt.Columns[0].Caption = "属性名称";
+            dt.Columns[1].Caption = "属性值";
             if (f.DataRow == null)
             {
                 f.ParentFeatureSet.FillAttributes();
