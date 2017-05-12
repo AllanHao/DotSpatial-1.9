@@ -15,7 +15,7 @@ namespace DotSpatial.Extensions
         /// <returns></returns>
         public static bool TryActivate(this IExtension extension)
         {
-            Trace.WriteLine("Activating: " + extension.AssemblyQualifiedName);
+            Trace.WriteLine("正在激活: " + extension.AssemblyQualifiedName);
             try
             {
                 extension.Activate();
@@ -23,7 +23,7 @@ namespace DotSpatial.Extensions
             }
             catch (Exception ex)
             {
-                Trace.WriteLine(String.Format("Error: {0} {1} {2}", extension.AssemblyQualifiedName, ex.Message, ex.StackTrace));
+                Trace.WriteLine(String.Format("错误: {0} {1} {2}", extension.AssemblyQualifiedName, ex.Message, ex.StackTrace));
                 return false;
             }
         }

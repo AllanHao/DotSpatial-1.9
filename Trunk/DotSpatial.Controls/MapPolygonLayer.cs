@@ -550,7 +550,7 @@ namespace DotSpatial.Controls
 
             if (ProgressReportingEnabled)
             {
-                ProgressMeter = new ProgressMeter(ProgressHandler, "Building Paths", indices.Count());
+                ProgressMeter = new ProgressMeter(ProgressHandler, "е§дкМгди", indices.Count());
             }
 
             if (!DrawnStatesNeeded)

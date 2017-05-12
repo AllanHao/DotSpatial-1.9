@@ -506,7 +506,7 @@ namespace DotSpatial.Controls
         /// </summary>
         private void AppLoadExtensions()
         {
-            message = "Discovering Extensions...";
+            message = "正在查找扩展...";
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             _catalog = GetCatalog();
 
@@ -522,7 +522,7 @@ namespace DotSpatial.Controls
                 throw;
             }
 
-            message = "Loading Extensions...";
+            message = "正在加载扩展...";
             OnExtensionsActivating(EventArgs.Empty);
         }
 
@@ -598,7 +598,7 @@ namespace DotSpatial.Controls
             {
                 // if there is a managed entry assembly running, add it.
                 catalog.Catalogs.Add(new AssemblyCatalog(mainExe));
-                Trace.WriteLine("Cataloging: " + mainExe.FullName);
+                Trace.WriteLine("正在查找目录: " + mainExe.FullName);
             }
 
             // Add DotSpatial Controls (includes defaut required extensions)
@@ -607,7 +607,7 @@ namespace DotSpatial.Controls
             // Add DotSpatial Data (Which includes data providers)
             Assembly dataDll = typeof(BinaryRasterProvider).Assembly;
             catalog.Catalogs.Add(new AssemblyCatalog(dataDll));
-            Trace.WriteLine("Cataloging: " + dataDll.FullName);
+            Trace.WriteLine("正在查找目录: " + dataDll.FullName);
 
             // Add all of the directories in ExtensionsDirectory, nested any number of levels.
             RefreshExtensions(catalog);
@@ -616,9 +616,9 @@ namespace DotSpatial.Controls
             foreach (string dir in GetDirectoriesNestedOneLevel())
             {
                 // Add files in the current directory as well.
-                Trace.WriteLine("Cataloging: " + dir);
+                Trace.WriteLine("正在查找目录: " + dir);
                 // UpdateSplashScreen("Cataloging: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit));
-                message = "Cataloging: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit);
+                message = "正在查找目录: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit);
                 if (!DirectoryCatalogExists(catalog, dir))
                     TryLoadingCatalog(catalog, new DirectoryCatalog(dir));
             }
@@ -711,9 +711,9 @@ namespace DotSpatial.Controls
             var directories = GetPackageExtensionPaths(AbsolutePathToExtensions);
             foreach (var dir in directories)
             {
-                Trace.WriteLine("Cataloging: " + dir);
+                Trace.WriteLine("正在查找目录: " + dir);
                 //UpdateSplashScreen("Cataloging: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit));
-                message = "Cataloging: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit);
+                message = "正在查找目录: " + PrefixWithEllipsis(dir, SplashDirectoryMessageLimit);
                 // todo: consider using a file system watcher if it would provider better performance.
                 if (!DirectoryCatalogExists(catalog, dir))
                     TryLoadingCatalog(catalog, new DirectoryCatalog(dir));
