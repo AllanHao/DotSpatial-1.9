@@ -39,6 +39,9 @@ namespace DotSpatial.Controls
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treFeatures = new System.Windows.Forms.TreeView();
             this.dgvAttributes = new System.Windows.Forms.DataGridView();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,6 +60,9 @@ namespace DotSpatial.Controls
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnReset);
+            this.splitContainer1.Panel2.Controls.Add(this.btnCancel);
+            this.splitContainer1.Panel2.Controls.Add(this.btnOK);
             this.splitContainer1.Panel2.Controls.Add(this.dgvAttributes);
             // 
             // treFeatures
@@ -68,9 +74,27 @@ namespace DotSpatial.Controls
             // dgvAttributes
             // 
             this.dgvAttributes.AllowUserToAddRows = false;
-            this.dgvAttributes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvAttributes, "dgvAttributes");
+            this.dgvAttributes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttributes.Name = "dgvAttributes";
+            // 
+            // btnOK
+            // 
+            resources.ApplyResources(this.btnOK, "btnOK");
+            this.btnOK.Name = "btnOK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnReset
+            // 
+            resources.ApplyResources(this.btnReset, "btnReset");
+            this.btnReset.Name = "btnReset";
+            this.btnReset.UseVisualStyleBackColor = true;
             // 
             // FeatureIdentifier
             // 
@@ -91,6 +115,8 @@ namespace DotSpatial.Controls
         private DataGridView dgvAttributes;
         private SplitContainer splitContainer1;
         internal TreeView treFeatures;
-
+        private Button btnCancel;
+        private Button btnOK;
+        private Button btnReset;
     }
 }

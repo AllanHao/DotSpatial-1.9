@@ -267,11 +267,12 @@ namespace DotSpatial.Controls
                 return;
             }
             var dt = new DataTable();
-
-            dt.Columns.Add("Field Name");
-            dt.Columns.Add("Value");
-            dt.Columns[0].Caption = "属性名称";
-            dt.Columns[1].Caption = "属性值";
+            DataColumn column = dt.Columns.Add("Field Name");
+            column.Caption = "属性名称";
+            column = dt.Columns.Add("Value");
+            column.Caption = "属性值";
+            column = dt.Columns.Add("FieldType");
+            column.Caption = "字段类型";
             if (f.DataRow == null)
             {
                 f.ParentFeatureSet.FillAttributes();
@@ -281,7 +282,11 @@ namespace DotSpatial.Controls
             {
                 var dr = dt.NewRow();
                 dr["Field Name"] = fld.ColumnName;
-                if (f.DataRow != null) dr["Value"] = f.DataRow[fld.ColumnName].ToString();
+                if (f.DataRow != null)
+                {
+                    dr["Value"] = f.DataRow[fld.ColumnName];
+                    dr["FieldType"] = dr["Value"].GetType().ToString();
+                }
                 dt.Rows.Add(dr);
             }
             dgvAttributes.DataSource = dt;
