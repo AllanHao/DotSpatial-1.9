@@ -51,12 +51,17 @@ namespace DotSpatial.Controls
             InitializeComponent();
             treFeatures.MouseUp += treFeatures_MouseUp;
             mnuTreeContext = new ContextMenu();
-            _mnuSelectMenu = new MenuItem("Select Feature");
-            _mnuSelectMenu.Click += selectMenu_Click;
+            //_mnuSelectMenu = new MenuItem("Select Feature");
+            //  _mnuSelectMenu.Click += selectMenu_Click;
             // The "ID Field" seems more like a display caption.
-            _mnuAssignIdField = new MenuItem("Assign ID Field");
-            _mnuAssignIdField.Click += _mnuAssignIdField_Click;
+            // _mnuAssignIdField = new MenuItem("Assign ID Field");
+            //_mnuAssignIdField.Click += _mnuAssignIdField_Click;
             _featureIDFields = new Dictionary<string, string>();
+
+            //zhangh 新增属性修改按钮
+            this.dgvAttributes.CellValueChanged += DgvAttributes_CellValueChanged;
+            this.btnOK.Click += BtnOK_Click;
+            this.btnReset.Click += BtnReset_Click;
         }
 
         #endregion
@@ -258,9 +263,19 @@ namespace DotSpatial.Controls
             // treFeatures.Focus();
         }
 
+        IFeature selectedFeature = null;
+
         private void treFeatures_AfterSelect(object sender, TreeViewEventArgs e)
         {
             var f = e.Node.Tag as IFeature;
+            this.selectedFeature = f;
+            this.bindFeatureFields(this.selectedFeature);
+            this.btnOK.Enabled = false;
+            this.btnOK.Enabled = false;
+        }
+
+        private void bindFeatureFields(IFeature f)
+        {
             if (f == null)
             {
                 dgvAttributes.DataSource = null;
@@ -271,6 +286,7 @@ namespace DotSpatial.Controls
             column.Caption = "属性名称";
             column = dt.Columns.Add("Value");
             column.Caption = "属性值";
+
             column = dt.Columns.Add("FieldType");
             column.Caption = "字段类型";
             if (f.DataRow == null)
@@ -282,16 +298,66 @@ namespace DotSpatial.Controls
             {
                 var dr = dt.NewRow();
                 dr["Field Name"] = fld.ColumnName;
+
                 if (f.DataRow != null)
                 {
                     dr["Value"] = f.DataRow[fld.ColumnName];
-                    dr["FieldType"] = dr["Value"].GetType().ToString();
+                    dr["FieldType"] = f.DataRow[fld.ColumnName] == null ? typeof(Object).ToString() : f.DataRow[fld.ColumnName].GetType().ToString();
                 }
                 dt.Rows.Add(dr);
             }
             dgvAttributes.DataSource = dt;
+            for (int i = 0; i < dgvAttributes.Columns.Count; i++)
+            {
+                dgvAttributes.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvAttributes.Columns[i].HeaderText = dt.Columns[i].Caption;
+                dgvAttributes.Columns[i].ValueType = dt.Columns[i].DataType;
+            }
+
+            dgvAttributes.Parent.Width = dgvAttributes.Width;
         }
 
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            this.bindFeatureFields(this.selectedFeature);
+            this.btnReset.Enabled = false;
+            this.btnOK.Enabled = false;
+        }
+
+        private void BtnOK_Click(object sender, EventArgs e)
+        {
+            if (this.selectedFeature == null)
+            {
+                return;
+            }
+            for (int i = 0; i < dgvAttributes.Rows.Count; i++)
+            {
+                string fieldName = dgvAttributes.Rows[i].Cells["Field Name"].Value.ToString();
+                Type dataType = Type.GetType(dgvAttributes.Rows[i].Cells["FieldType"].Value.ToString());
+                if (dgvAttributes.Rows[i].Cells["Value"].Value != DBNull.Value)
+                {
+                    if (this.selectedFeature.DataRow[fieldName] != (dataType == typeof(DBNull) ? dgvAttributes.Rows[i].Cells["Value"].Value : Convert.ChangeType(dgvAttributes.Rows[i].Cells["Value"].Value, dataType)))
+                    {
+                        this.selectedFeature.DataRow[fieldName] = dgvAttributes.Rows[i].Cells["Value"].Value;
+                    }
+                }
+                else
+                {
+                    this.selectedFeature.DataRow[fieldName] = DBNull.Value;
+                }
+
+            }
+            this.selectedFeature.ParentFeatureSet.Save();
+            this.btnOK.Enabled = false;
+            this.btnReset.Enabled = false;
+        }
+
+
+        private void DgvAttributes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            this.btnReset.Enabled = true;
+            this.btnOK.Enabled = true;
+        }
         #endregion
     }
 }
