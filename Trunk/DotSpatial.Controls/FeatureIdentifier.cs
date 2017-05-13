@@ -270,7 +270,7 @@ namespace DotSpatial.Controls
             var f = e.Node.Tag as IFeature;
             this.selectedFeature = f;
             this.bindFeatureFields(this.selectedFeature);
-            this.btnOK.Enabled = false;
+            this.btnReset.Enabled = false;
             this.btnOK.Enabled = false;
         }
 
@@ -312,9 +312,17 @@ namespace DotSpatial.Controls
                 dgvAttributes.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvAttributes.Columns[i].HeaderText = dt.Columns[i].Caption;
                 dgvAttributes.Columns[i].ValueType = dt.Columns[i].DataType;
+                if (i == 1)
+                {
+                    dgvAttributes.Columns[i].ReadOnly = false;
+                }
+                else
+                {
+                    dgvAttributes.Columns[i].ReadOnly = true;
+                }
             }
 
-            dgvAttributes.Parent.Width = dgvAttributes.Width;
+            //  dgvAttributes.Parent.Width = dgvAttributes.Width;
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
@@ -334,18 +342,18 @@ namespace DotSpatial.Controls
             {
                 string fieldName = dgvAttributes.Rows[i].Cells["Field Name"].Value.ToString();
                 Type dataType = Type.GetType(dgvAttributes.Rows[i].Cells["FieldType"].Value.ToString());
-                if (dgvAttributes.Rows[i].Cells["Value"].Value != DBNull.Value)
+                object cellValue = dgvAttributes.Rows[i].Cells["Value"].Value;
+                if (cellValue != DBNull.Value)
                 {
-                    if (this.selectedFeature.DataRow[fieldName] != (dataType == typeof(DBNull) ? dgvAttributes.Rows[i].Cells["Value"].Value : Convert.ChangeType(dgvAttributes.Rows[i].Cells["Value"].Value, dataType)))
+                    if (dataType != typeof(DBNull))
                     {
-                        this.selectedFeature.DataRow[fieldName] = dgvAttributes.Rows[i].Cells["Value"].Value;
+                        cellValue = Convert.ChangeType(cellValue, dataType);
                     }
                 }
-                else
+                if (this.selectedFeature.DataRow[fieldName] != cellValue)
                 {
-                    this.selectedFeature.DataRow[fieldName] = DBNull.Value;
+                    this.selectedFeature.DataRow[fieldName] = cellValue;
                 }
-
             }
             this.selectedFeature.ParentFeatureSet.Save();
             this.btnOK.Enabled = false;
@@ -355,8 +363,35 @@ namespace DotSpatial.Controls
 
         private void DgvAttributes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            this.btnReset.Enabled = true;
-            this.btnOK.Enabled = true;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                return;
+            }
+            if (this.selectedFeature == null)
+            {
+                return;
+            }
+            string fieldName = this.dgvAttributes.Rows[e.RowIndex].Cells["Field Name"].Value.ToString();
+            object rtValue = this.selectedFeature.DataRow[fieldName];
+            object gridValue = this.dgvAttributes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            if (rtValue == null && gridValue != null)
+            {
+                this.btnOK.Enabled = true;
+                this.btnReset.Enabled = true;
+                return;
+            }
+
+            string strRt = rtValue.ToString();
+            string strGrid = gridValue == null ? "" : gridValue.ToString();
+
+            if (!strRt.Equals(strGrid))
+            {
+                this.btnOK.Enabled = true;
+                this.btnReset.Enabled = true;
+                return;
+            }
+            this.btnOK.Enabled = false;
+            this.btnReset.Enabled = false;
         }
         #endregion
     }

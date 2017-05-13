@@ -132,7 +132,7 @@
     <value>0, 0</value>
   </data>
   <data name="treFeatures.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 360</value>
+    <value>203, 360</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="treFeatures.TabIndex" type="System.Int32, mscorlib">
@@ -169,7 +169,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnReset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 324</value>
+    <value>149, 324</value>
   </data>
   <data name="btnReset.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -196,7 +196,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 324</value>
+    <value>241, 324</value>
   </data>
   <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -226,7 +226,7 @@
     <value>3, 3</value>
   </data>
   <data name="dgvAttributes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>336, 315</value>
+    <value>347, 315</value>
   </data>
   <data name="dgvAttributes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -256,10 +256,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>543, 360</value>
+    <value>560, 360</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>197</value>
+    <value>203</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -283,7 +283,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>543, 360</value>
+    <value>560, 360</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
