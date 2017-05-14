@@ -84,9 +84,9 @@ namespace DotSpatial.Controls
             var latCheck = parseCoordinates(lat, d1.Text);
             var lonCheck = parseCoordinates(lon, d2.Text);
 
-            if (!latCheck) { latStatus.Text = "Invalid Latitude (Valid example: \"41.1939 N\")"; }
+            if (!latCheck) { latStatus.Text = "纬度不正确 (示例: \"41.1939 N\")"; }
             else { latStatus.Text = ""; }
-            if (!lonCheck) { lonStatus.Text = "Invalid Longitude (Valid example: \"19.4908 E\")"; }
+            if (!lonCheck) { lonStatus.Text = "经度不正确 (示例: \"19.4908 E\")"; }
             else { latStatus.Text = "";}
 
             return latCheck && lonCheck;

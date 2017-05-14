@@ -301,8 +301,8 @@ namespace DotSpatial.Controls
 
                 if (f.DataRow != null)
                 {
-                    dr["Value"] = f.DataRow[fld.ColumnName];
-                    dr["FieldType"] = f.DataRow[fld.ColumnName] == null ? typeof(Object).ToString() : f.DataRow[fld.ColumnName].GetType().ToString();
+                    dr["Value"] = f.DataRow[fld.ColumnName]; 
+                    dr["FieldType"] = f.DataRow.Table.Columns[fld.ColumnName].DataType.ToString();
                 }
                 dt.Rows.Add(dr);
             }

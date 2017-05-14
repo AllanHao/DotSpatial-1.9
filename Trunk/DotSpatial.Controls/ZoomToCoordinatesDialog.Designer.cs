@@ -43,9 +43,9 @@
             // 
             // BT_Accept
             // 
-            this.BT_Accept.Location = new System.Drawing.Point(58, 130);
+            this.BT_Accept.Location = new System.Drawing.Point(79, 127);
             this.BT_Accept.Name = "BT_Accept";
-            this.BT_Accept.Size = new System.Drawing.Size(72, 30);
+            this.BT_Accept.Size = new System.Drawing.Size(72, 28);
             this.BT_Accept.TabIndex = 3;
             this.BT_Accept.Text = "OK";
             this.BT_Accept.UseVisualStyleBackColor = true;
@@ -54,9 +54,9 @@
             // BT_Cancel
             // 
             this.BT_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BT_Cancel.Location = new System.Drawing.Point(136, 130);
+            this.BT_Cancel.Location = new System.Drawing.Point(157, 127);
             this.BT_Cancel.Name = "BT_Cancel";
-            this.BT_Cancel.Size = new System.Drawing.Size(72, 30);
+            this.BT_Cancel.Size = new System.Drawing.Size(72, 28);
             this.BT_Cancel.TabIndex = 4;
             this.BT_Cancel.Text = "Cancel";
             this.BT_Cancel.UseVisualStyleBackColor = true;
@@ -64,86 +64,86 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 43);
+            this.label1.Location = new System.Drawing.Point(28, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Latitude";
+            this.label1.Text = "纬度";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 88);
+            this.label2.Location = new System.Drawing.Point(28, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Longitude";
+            this.label2.Text = "经度";
             // 
             // d1
             // 
-            this.d1.Location = new System.Drawing.Point(118, 41);
+            this.d1.Location = new System.Drawing.Point(63, 32);
             this.d1.Name = "d1";
-            this.d1.Size = new System.Drawing.Size(91, 20);
+            this.d1.Size = new System.Drawing.Size(166, 21);
             this.d1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(210, 41);
+            this.label3.Location = new System.Drawing.Point(235, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(11, 13);
+            this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 12;
             this.label3.Text = "°";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(210, 85);
+            this.label10.Location = new System.Drawing.Point(235, 84);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(11, 13);
+            this.label10.Size = new System.Drawing.Size(17, 12);
             this.label10.TabIndex = 20;
             this.label10.Text = "°";
             // 
             // d2
             // 
-            this.d2.Location = new System.Drawing.Point(118, 85);
+            this.d2.Location = new System.Drawing.Point(63, 78);
             this.d2.Name = "d2";
-            this.d2.Size = new System.Drawing.Size(91, 20);
+            this.d2.Size = new System.Drawing.Size(166, 21);
             this.d2.TabIndex = 2;
             // 
             // latStatus
             // 
             this.latStatus.AutoSize = true;
-            this.latStatus.Location = new System.Drawing.Point(28, 64);
+            this.latStatus.Location = new System.Drawing.Point(12, 61);
             this.latStatus.Name = "latStatus";
-            this.latStatus.Size = new System.Drawing.Size(58, 13);
+            this.latStatus.Size = new System.Drawing.Size(65, 12);
             this.latStatus.TabIndex = 24;
             this.latStatus.Text = "latWarning";
             // 
             // lonStatus
             // 
             this.lonStatus.AutoSize = true;
-            this.lonStatus.Location = new System.Drawing.Point(28, 109);
+            this.lonStatus.Location = new System.Drawing.Point(12, 112);
             this.lonStatus.Name = "lonStatus";
-            this.lonStatus.Size = new System.Drawing.Size(67, 13);
+            this.lonStatus.Size = new System.Drawing.Size(71, 12);
             this.lonStatus.TabIndex = 25;
             this.lonStatus.Text = "longWarning";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 10);
+            this.label4.Location = new System.Drawing.Point(28, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 13);
+            this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Please enter the desired coordinates:";
+            this.label4.Text = "请输入坐标：";
             // 
             // ZoomToCoordinatesDialog
             // 
             this.AcceptButton = this.BT_Accept;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 172);
+            this.ClientSize = new System.Drawing.Size(267, 169);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lonStatus);
             this.Controls.Add(this.latStatus);
@@ -160,7 +160,7 @@
             this.Name = "ZoomToCoordinatesDialog";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Zoom to Coordinates";
+            this.Text = "缩放到指定坐标";
             this.ResumeLayout(false);
             this.PerformLayout();
 

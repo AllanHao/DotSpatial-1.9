@@ -228,38 +228,38 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </metadata>
+  </data>
   <data name="addFieldToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="addFieldToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Field</value>
+    <value>新增字段</value>
   </data>
   <data name="removeFieldToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="removeFieldToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove Field</value>
+    <value>移除字段</value>
   </data>
   <data name="renameFieldToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="renameFieldToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rename Field</value>
+    <value>重命名字段</value>
   </data>
   <data name="enableEditingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="enableEditingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Enable Editing</value>
+    <value>启用编辑</value>
   </data>
   <data name="saveEditsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 22</value>
   </data>
   <data name="saveEditsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save Edits</value>
+    <value>保存编辑</value>
   </data>
   <data name="saveEditsToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -268,19 +268,19 @@
     <value>39, 20</value>
   </data>
   <data name="mnuEdit.Text" xml:space="preserve">
-    <value>Edit</value>
+    <value>编辑</value>
   </data>
   <data name="showOnlySelectedShapesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
   <data name="showOnlySelectedShapesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show only Selected Shapes</value>
+    <value>仅显示选中要素</value>
   </data>
   <data name="zoomToSelectedShapesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
   <data name="zoomToSelectedShapesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zoom to Selected Shapes</value>
+    <value>缩放到选中要素</value>
   </data>
   <data name="zoomToShapeBeingEditedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
@@ -304,7 +304,7 @@
     <value>44, 20</value>
   </data>
   <data name="mnuView.Text" xml:space="preserve">
-    <value>View</value>
+    <value>视图</value>
   </data>
   <data name="queryToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F6</value>
@@ -313,19 +313,19 @@
     <value>201, 22</value>
   </data>
   <data name="queryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Query</value>
+    <value>查找</value>
   </data>
   <data name="selectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 22</value>
   </data>
   <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Select All</value>
+    <value>全部选中</value>
   </data>
   <data name="selectNoneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 22</value>
   </data>
   <data name="selectNoneToolStripMenuItem.Text" xml:space="preserve">
-    <value>Select None</value>
+    <value>清除选中</value>
   </data>
   <data name="invertSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 22</value>
@@ -337,25 +337,25 @@
     <value>201, 22</value>
   </data>
   <data name="exportSelectedFeaturesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Export Selected Features</value>
+    <value>导出选中的要素</value>
   </data>
   <data name="mnuSelection.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 20</value>
   </data>
   <data name="mnuSelection.Text" xml:space="preserve">
-    <value>Selection</value>
+    <value>选择</value>
   </data>
   <data name="findToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 22</value>
   </data>
   <data name="findToolStripMenuItem.Text" xml:space="preserve">
-    <value>Find</value>
+    <value>查找</value>
   </data>
   <data name="replaceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 22</value>
   </data>
   <data name="replaceToolStripMenuItem.Text" xml:space="preserve">
-    <value>Replace</value>
+    <value>替换</value>
   </data>
   <data name="importFieldDefinitionsFromDBFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 22</value>
@@ -394,7 +394,7 @@
     <value>48, 20</value>
   </data>
   <data name="mnuTools.Text" xml:space="preserve">
-    <value>Tools</value>
+    <value>工具</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -420,9 +420,9 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </metadata>
+  </data>
   <data name="tsbtnSaveEdits.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -433,7 +433,7 @@
     <value>toolStripButton1</value>
   </data>
   <data name="tsbtnSaveEdits.ToolTipText" xml:space="preserve">
-    <value>Save Edits</value>
+    <value>保存编辑</value>
   </data>
   <data name="tsbtnZoomToSelected.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -517,7 +517,7 @@
     <value>23, 22</value>
   </data>
   <data name="tsbtnQuery.Text" xml:space="preserve">
-    <value>Query</value>
+    <value>查找</value>
   </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -567,9 +567,9 @@
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>438, 426</value>
   </data>

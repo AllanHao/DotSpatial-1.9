@@ -70,8 +70,8 @@ namespace DotSpatial.Controls
             header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Open, OpenProject_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 10, SmallImage = Images.folder_16x16, LargeImage = Images.folder_32x32, ToolTipText = Msg.FileOpenToolTip });
             header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Save, SaveProject_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 15, SmallImage = Images.disk_16x16, LargeImage = Images.disk_32x32, });
             header.Add(new SimpleActionItem(FileMenuKey, Msg.File_SaveAs, SaveProjectAs_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 20, SmallImage = Images.save_as_16x16, LargeImage = Images.save_as_32x32, ToolTipText = Msg.FileSaveAsToolTip });
-
-            header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Options, Options_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 25 });
+            //zhangh 注掉
+           // header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Options, Options_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 25 });
             header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Print, PrintLayout_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 40, SmallImage = Images.printer_16x16, LargeImage = Images.printer_32x32 });
 
             header.Add(new SimpleActionItem(FileMenuKey, Msg.File_Reset_Layout, ResetLayout_Click) { GroupCaption = HeaderControl.ApplicationMenuKey, SortOrder = 200, SmallImage = Images.layout_delete_16x16, LargeImage = Images.layout_delete_32x32 });
